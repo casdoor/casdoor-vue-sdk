@@ -1,16 +1,32 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <button @click="login">log in</button>
+<!--  <button @click="signup">sign up</button>-->
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Casdoor from './plugin/index'
 
+const config = {
+  serverUrl: "http://localhost:7001",
+  clientId: "4262bea2b293539fe45e",
+  organizationName: "casbin",
+  appName: "app-casnode",
+  redirectPath: "/callback",
+};
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+  },
+  //call helper.init when the app is mounted
+  mounted() {
+    Casdoor.init(config)
+  },
+  methods: {
+    login() {
+      window.location.href=Casdoor.getSigninUrl()
+    },
+  },
 }
 </script>
 
