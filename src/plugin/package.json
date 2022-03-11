@@ -1,8 +1,0 @@
-{
-  "name": "casdoor-vue-sdk",
-  "version": "1.0.0",
-  "description": "Casdoor Vue SDK",
-  "dependencies": {
-    "casdoor-js-sdk": "^0.2.7"
-  }
-}
