@@ -12,6 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import Casdoor from './src/main'
+import Casdoor from './src/CasdoorSDK'
 
 export default Casdoor
