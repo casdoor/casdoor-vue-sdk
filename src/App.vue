@@ -1,7 +1,7 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <button @click="login">log in</button>
-<!--  <button @click="signup">sign up</button>-->
+  <button @click="signup">sign up</button>
 </template>
 
 <script>
@@ -9,9 +9,9 @@ import Casdoor from './plugin/index'
 
 const config = {
   serverUrl: "http://localhost:7001",
-  clientId: "4262bea2b293539fe45e",
-  organizationName: "casbin",
-  appName: "app-casnode",
+  clientId: "288fdc8522f360207141",
+  organizationName: "casbin-forum",
+  appName: "forum",
   redirectPath: "/callback",
 };
 export default {
@@ -26,6 +26,12 @@ export default {
     login() {
       window.location.href=Casdoor.getSigninUrl()
     },
+    signup() {
+      window.location.href=Casdoor.getSignupUrl()
+    },
+    // logout() {
+    //   Casdoor.logout()
+    // }
   },
 }
 </script>
