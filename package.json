@@ -1,7 +1,9 @@
 {
   "name": "casdoor-vue-sdk",
-  "version": "0.1.0",
+  "version": "0.0.1",
+  "description": "Vue client SDK for Casdoor",
   "private": false,
+  "license": "Apache-2.0",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -13,6 +15,12 @@
     "casdoor-js-sdk": "^0.2.7"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/github": "^7.2.3",
+    "@semantic-release/npm": "^7.1.3",
+    "@semantic-release/release-notes-generator": "^9.0.3",
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
     "@vue/cli-plugin-babel": "~5.0.0",
@@ -20,7 +28,8 @@
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
-    "webpack-cli": "^4.9.2"
+    "webpack-cli": "^4.9.2",
+    "semantic-release": "^17.4.4"
   },
   "eslintConfig": {
     "root": true,
@@ -36,10 +45,27 @@
     },
     "rules": {}
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead",
-    "not ie 11"
-  ]
+  "keywords": [
+    "auth",
+    "authn",
+    "authentication",
+    "sso",
+    "oauth",
+    "oidc",
+    "casbin",
+    "casdoor"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/casdoor/casdoor-vue-sdk.git"
+  },
+  "author": {
+    "name": "Nekotoxin",
+    "email": "Nekotoxin@outlook.com"
+  },
+  "bugs": {
+    "url": "https://github.com/casdoor/casdoor-vue-sdk/issues"
+  },
+  "homepage": "https://github.com/casdoor/casdoor-vue-sdk"
+
 }
