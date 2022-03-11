@@ -58,4 +58,5 @@ export default {
 }
 ```
 ## For developer:
+
 use command `webpack` in the root directory to build the sdk  
