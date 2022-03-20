@@ -1,5 +1,22 @@
 # casdoor-vue-sdk
 
+[![NPM version][npm-image]][npm-url]
+[![NPM download][download-image]][download-url]
+[![codebeat badge](https://codebeat.co/badges/6f2ad052-7fc8-42e1-b40f-0ca2648530c2)](https://codebeat.co/projects/github-com-casdoor-casdoor-vue-sdk-master)
+[![GitHub Actions](https://github.com/casdoor/casdoor-vue-sdk/actions/workflows/release.yml/badge.svg)](https://github.com/casdoor/casdoor-vue-sdk/actions/workflows/release.yml)
+[![GitHub Actions](https://github.com/casdoor/casdoor-vue-sdk/actions/workflows/build.yml/badge.svg)](https://github.com/casdoor/casdoor-vue-sdk/actions/workflows/build.yml)
+[![Coverage Status](https://codecov.io/gh/casdoor/casdoor-vue-sdk/branch/master/graph/badge.svg)](https://codecov.io/gh/casdoor/casdoor-vue-sdk)
+[![Release](https://img.shields.io/github/release/casdoor/casdoor-vue-sdk.svg)](https://github.com/casdoor/casdoor-vue-sdk/releases/latest)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/casbin/casdoor)
+
+[npm-image]: https://img.shields.io/npm/v/casdoor-vue-sdk.svg?style=flat-square
+
+[npm-url]: https://npmjs.com/package/casdoor-vue-sdk
+
+[download-image]: https://img.shields.io/npm/dm/casdoor-vue-sdk.svg?style=flat-square
+
+[download-url]: https://npmjs.com/package/casdoor-vue-sdk
+
 This is Casdoor's SDK for js will allow you to easily connect your application to the Casdoor authentication system
 without having to implement it from scratch.
 
