@@ -14,38 +14,28 @@
 
 import Sdk from "casdoor-js-sdk";
 
-let ServerUrl = '';
-let CasdoorSDK;
+export default {
+  install(app, options) {
+    let CasdoorSDK = new Sdk(options);
 
-let Casdoor = function(){}
+    app.config.globalProperties.getSignupUrl = () => {
+      return CasdoorSDK.getSignupUrl();
+    };
 
-Casdoor.init = function initCasdoorSdk(config) {
-  CasdoorSDK = new Sdk(config);
-  ServerUrl = config.serverUrl;
+    app.config.globalProperties.getSigninUrl = () => {
+      return CasdoorSDK.getSigninUrl();
+    };
+
+    app.config.globalProperties.getUserProfileUrl = (userName, account) => {
+      return CasdoorSDK.getUserProfileUrl(userName, account);
+    };
+
+    app.config.globalProperties.getMyProfileUrl = (account) => {
+      return CasdoorSDK.getMyProfileUrl(account);
+    };
+
+    app.config.globalProperties.signin = (ServerUrl) => {
+      return CasdoorSDK.signin(ServerUrl);
+    };
+  }
 }
-
-Casdoor.getSignupUrl= function getSignupUrl() {
-  return CasdoorSDK.getSignupUrl();
-}
-
-Casdoor.getSigninUrl = function getSigninUrl() {
-  return CasdoorSDK.getSigninUrl();
-}
-
-Casdoor.getUserProfileUrl = function getUserProfileUrl(userName, account) {
-  return CasdoorSDK.getUserProfileUrl(userName, account);
-}
-
-Casdoor.getMyProfileUrl=  function getMyProfileUrl(account) {
-  return CasdoorSDK.getMyProfileUrl(account);
-}
-
-Casdoor.getMyResourcesUrl=  function getMyResourcesUrl(account) {
-  return CasdoorSDK.getMyProfileUrl(account).replace("/account?", "/resources?");
-}
-
-Casdoor.signin = function signin() {
-  return CasdoorSDK.signin(ServerUrl);
-}
-
-export default Casdoor;

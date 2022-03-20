@@ -1,6 +1,5 @@
 # casdoor-vue-sdk
 
-
 This is Casdoor's SDK for js will allow you to easily connect your application to the Casdoor authentication system
 without having to implement it from scratch.
 
@@ -30,33 +29,41 @@ Initialization requires 5 parameters, which are all string type:
 | organizationName     | Yes  | the name of the Casdoor organization connected with your Casdoor application                    |
 | redirectPath     | No  | the path of the redirect URL for your Casdoor application, will be `/callback` if not provided              |
 
-example :
+
+install:
+
 ```javascript
-import Casdoor from 'casdoor-vue-sdk'
+// in main.js
 const config = {
   serverUrl: "http://localhost:7001",
-  clientId: "288fdc8522f360207141",
-  organizationName: "casbin-forum",
-  appName: "forum",
+  clientId: "4262bea2b293539fe45e",
+  organizationName: "casbin",
+  appName: "app-casnode",
   redirectPath: "/callback",
 };
+const app = createApp(App)
+app.use(Casdoor, config)
+```
+
+example:
+
+```vue
+// in app.vue
+<script>
 export default {
   name: 'App',
-  components: {
-  },
-  mounted() {
-    Casdoor.init(config); //init the SDK by the config when the application is mounted
-  },
   methods: {
     login() {
-      window.location.href=Casdoor.getSigninUrl()
+      window.location.href = this.getSigninUrl();
     },
     signup() {
-      window.location.href=Casdoor.getSignupUrl()
-    },
-  },
+      window.location.href = this.getSignupUrl();
+    }
+  }
 }
+</script>
 ```
+
 ## For developer:
 
 use command `webpack` in the root directory to build the sdk  
