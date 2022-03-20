@@ -37,9 +37,9 @@ install:
 import Casdoor from 'casdoor-vue-sdk'
 const config = {
   serverUrl: "http://localhost:7001",
-  clientId: "4262bea2b293539fe45e",
-  organizationName: "casbin",
-  appName: "app-casnode",
+  clientId: "288fdc8522f360207141",
+  organizationName: "casbin-forum",
+  appName: "forum",
   redirectPath: "/callback",
 };
 const app = createApp(App)
