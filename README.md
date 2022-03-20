@@ -34,6 +34,7 @@ install:
 
 ```javascript
 // in main.js
+import Casdoor from 'casdoor-vue-sdk'
 const config = {
   serverUrl: "http://localhost:7001",
   clientId: "4262bea2b293539fe45e",
