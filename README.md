@@ -1,5 +1,21 @@
 # casdoor-vue-sdk
 
+[![NPM version][npm-image]][npm-url]
+[![NPM download][download-image]][download-url]
+[![codebeat badge](https://codebeat.co/badges/6f2ad052-7fc8-42e1-b40f-0ca2648530c2)](https://codebeat.co/projects/github-com-casdoor-casdoor-vue-sdk-master)
+[![GitHub Actions](https://github.com/casdoor/casdoor-vue-sdk/actions/workflows/release.yml/badge.svg)](https://github.com/casdoor/casdoor-vue-sdk/actions/workflows/release.yml)
+[![GitHub Actions](https://github.com/casdoor/casdoor-vue-sdk/actions/workflows/build.yml/badge.svg)](https://github.com/casdoor/casdoor-vue-sdk/actions/workflows/build.yml)
+[![Coverage Status](https://codecov.io/gh/casdoor/casdoor-vue-sdk/branch/master/graph/badge.svg)](https://codecov.io/gh/casdoor/casdoor-vue-sdk)
+[![Release](https://img.shields.io/github/release/casdoor/casdoor-vue-sdk.svg)](https://github.com/casdoor/casdoor-vue-sdk/releases/latest)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/casbin/casdoor)
+
+[npm-image]: https://img.shields.io/npm/v/casdoor-vue-sdk.svg?style=flat-square
+
+[npm-url]: https://npmjs.com/package/casdoor-vue-sdk
+
+[download-image]: https://img.shields.io/npm/dm/casdoor-vue-sdk.svg?style=flat-square
+
+[download-url]: https://npmjs.com/package/casdoor-vue-sdk
 
 This is Casdoor's SDK for js will allow you to easily connect your application to the Casdoor authentication system
 without having to implement it from scratch.
@@ -30,8 +46,11 @@ Initialization requires 5 parameters, which are all string type:
 | organizationName     | Yes  | the name of the Casdoor organization connected with your Casdoor application                    |
 | redirectPath     | No  | the path of the redirect URL for your Casdoor application, will be `/callback` if not provided              |
 
-example :
+
+install:
+
 ```javascript
+// in main.js
 import Casdoor from 'casdoor-vue-sdk'
 const config = {
   serverUrl: "http://localhost:7001",
@@ -40,23 +59,29 @@ const config = {
   appName: "forum",
   redirectPath: "/callback",
 };
+const app = createApp(App)
+app.use(Casdoor, config)
+```
+
+example:
+
+```vue
+// in app.vue
+<script>
 export default {
   name: 'App',
-  components: {
-  },
-  mounted() {
-    Casdoor.init(config); //init the SDK by the config when the application is mounted
-  },
   methods: {
     login() {
-      window.location.href=Casdoor.getSigninUrl()
+      window.location.href = this.getSigninUrl();
     },
     signup() {
-      window.location.href=Casdoor.getSignupUrl()
-    },
-  },
+      window.location.href = this.getSignupUrl();
+    }
+  }
 }
+</script>
 ```
+
 ## For developer:
 
 use command `webpack` in the root directory to build the sdk  
