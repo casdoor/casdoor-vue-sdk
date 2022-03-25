@@ -15,8 +15,3 @@ jobs:
       - run: yarn install
 
       - run: webpack
-
-      - name: Codecov
-        uses: codecov/codecov-action@v1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
