@@ -13,29 +13,54 @@
 // limitations under the License.
 
 import Sdk from "casdoor-js-sdk";
+import {isVue2} from "vue-demi";
 
 export default {
   install(app, options) {
     let CasdoorSDK = new Sdk(options);
 
-    app.config.globalProperties.getSignupUrl = () => {
-      return CasdoorSDK.getSignupUrl();
-    };
+    if(isVue2){
+      app.prototype.getSignupUrl = () => {
+        return CasdoorSDK.getSignupUrl();
+      };
 
-    app.config.globalProperties.getSigninUrl = () => {
-      return CasdoorSDK.getSigninUrl();
-    };
+      app.prototype.getSigninUrl = () => {
+        return CasdoorSDK.getSigninUrl();
+      };
 
-    app.config.globalProperties.getUserProfileUrl = (userName, account) => {
-      return CasdoorSDK.getUserProfileUrl(userName, account);
-    };
+      app.prototype.getUserProfileUrl = (userName, account) => {
+        return CasdoorSDK.getUserProfileUrl(userName, account);
+      };
 
-    app.config.globalProperties.getMyProfileUrl = (account) => {
-      return CasdoorSDK.getMyProfileUrl(account);
-    };
+      app.prototype.getMyProfileUrl = (account) => {
+        return CasdoorSDK.getMyProfileUrl(account);
+      };
 
-    app.config.globalProperties.signin = (ServerUrl) => {
-      return CasdoorSDK.signin(ServerUrl);
-    };
+      app.prototype.signin = (ServerUrl) => {
+        return CasdoorSDK.signin(ServerUrl);
+      };
+    }else{
+      app.config.globalProperties.getSignupUrl = () => {
+        return CasdoorSDK.getSignupUrl();
+      };
+
+      app.config.globalProperties.getSigninUrl = () => {
+        return CasdoorSDK.getSigninUrl();
+      };
+
+      app.config.globalProperties.getUserProfileUrl = (userName, account) => {
+        return CasdoorSDK.getUserProfileUrl(userName, account);
+      };
+
+      app.config.globalProperties.getMyProfileUrl = (account) => {
+        return CasdoorSDK.getMyProfileUrl(account);
+      };
+
+      app.config.globalProperties.signin = (ServerUrl) => {
+        return CasdoorSDK.signin(ServerUrl);
+      };
+    }
+
+
   }
 }
