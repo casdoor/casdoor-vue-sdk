@@ -16,14 +16,14 @@
 [download-image]: https://img.shields.io/npm/dm/casdoor-vue-sdk.svg?style=flat-square
 
 [download-url]: https://npmjs.com/package/casdoor-vue-sdk
- 
+
 This is Casdoor's SDK for js will allow you to easily connect your application to the Casdoor authentication system
 without having to implement it from scratch.
 
 Casdoor SDK is very simple to use. We will show you the steps below.
- 
+
 > Noted that this sdk has been applied to casnode, if you still don’t know how to use it after reading README.md, you can refer to it
- 
+
 ## Installation
 
 ~~~shell script
