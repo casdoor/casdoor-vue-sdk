@@ -49,18 +49,39 @@ Initialization requires 5 parameters, which are all string type:
 
 install:
 
+For Vue3:
 ```javascript
 // in main.js
 import Casdoor from 'casdoor-vue-sdk'
 const config = {
-  serverUrl: "http://localhost:7001",
-  clientId: "288fdc8522f360207141",
-  organizationName: "casbin-forum",
-  appName: "forum",
+  serverUrl: "http://localhost:8000",
+  clientId: "4262bea2b293539fe45e",
+  organizationName: "casbin",
+  appName: "app-casnode",
   redirectPath: "/callback",
 };
 const app = createApp(App)
 app.use(Casdoor, config)
+```
+
+For Vue2:
+
+```javascript
+// in main.js
+import Casdoor from 'casdoor-vue-sdk'
+import VueCompositionAPI from '@vue/composition-api'
+const config = {
+  serverUrl: "http://localhost:8000",
+  clientId: "4262bea2b293539fe45e",
+  organizationName: "casbin",
+  appName: "app-casnode",
+  redirectPath: "/callback",
+};
+Vue.use(VueCompositionAPI)
+Vue.use(Casdoor,config)
+new Vue({
+  render: h => h(App),
+}).$mount('#app')
 ```
 
 example:
