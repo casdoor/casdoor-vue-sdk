@@ -57,7 +57,12 @@ export default {
       };
 
       app.config.globalProperties.signin = (ServerUrl) => {
-        return CasdoorSDK.signin(ServerUrl);
+        const code = window.location.href.split('code=')[1].split('&')[0];
+        const state = window.location.href.split('state=')[1].split('&')[0];
+        return fetch(`${ServerUrl}/api/signin?code=${code}&state=${state}`, {
+          method: "POST",
+          credentials: "include",
+        }).then(res => res.json());
       };
     }
 
