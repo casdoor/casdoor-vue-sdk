@@ -103,6 +103,12 @@ export default {
 </script>
 ```
 
+## Q & A
+
+Q1:  How to solve "...index.js implicitly has an 'any' type..." error in typescript project?
+
+A1:  Add a new declaration (.d.ts) file containing `declare module 'casdoor-vue-sdk'. See it at [Shorthand ambient modules](https://www.typescriptlang.org/docs/handbook/modules.html#shorthand-ambient-modules)
+
 ## For developer:
 
 use command `webpack` in the root directory to build the sdk  
