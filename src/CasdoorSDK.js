@@ -42,7 +42,15 @@ export default {
       };
     }else{
 
-      app.provide(CASDOOR_SDK_INJECTION_KEY,CasdoorSDK);
+      app.provide(CASDOOR_SDK_INJECTION_KEY,
+        {
+          getSignupUrl: CasdoorSDK.getSignupUrl.bind(CasdoorSDK),
+          getSigninUrl: CasdoorSDK.getSigninUrl.bind(CasdoorSDK),
+          getUserProfileUrl: CasdoorSDK.getUserProfileUrl.bind(CasdoorSDK),
+          getMyProfileUrl: CasdoorSDK.getMyProfileUrl.bind(CasdoorSDK),
+          signin: CasdoorSDK.signin.bind(CasdoorSDK)
+        }
+      );
 
       app.config.globalProperties.getSignupUrl = () => {
         return CasdoorSDK.getSignupUrl();
