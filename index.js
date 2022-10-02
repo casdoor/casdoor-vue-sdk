@@ -12,6 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import Casdoor from './src/CasdoorSDK'
+import { inject } from 'vue'
+import Sdk from 'casdoor-js-sdk';
+import { CASDOOR_SDK_INJECTION_KEY } from '@/token'
+import Casdoor from '@/CasdoorSDK'
 
 export default Casdoor
+
+/**
+ * @summary returns the instance of `Sdk`. 
+ * @returns {Sdk}
+ */
+export function useCasdoor() {
+    return inject(CASDOOR_SDK_INJECTION_KEY);
+}

@@ -14,6 +14,7 @@
 
 import Sdk from "casdoor-js-sdk";
 import {isVue2} from "vue-demi";
+import { CASDOOR_SDK_INJECTION_KEY } from "@/token";
 
 export default {
   install(app, options) {
@@ -40,6 +41,17 @@ export default {
         return CasdoorSDK.signin(ServerUrl);
       };
     }else{
+
+      app.provide(CASDOOR_SDK_INJECTION_KEY,
+        {
+          getSignupUrl: CasdoorSDK.getSignupUrl.bind(CasdoorSDK),
+          getSigninUrl: CasdoorSDK.getSigninUrl.bind(CasdoorSDK),
+          getUserProfileUrl: CasdoorSDK.getUserProfileUrl.bind(CasdoorSDK),
+          getMyProfileUrl: CasdoorSDK.getMyProfileUrl.bind(CasdoorSDK),
+          signin: CasdoorSDK.signin.bind(CasdoorSDK)
+        }
+      );
+
       app.config.globalProperties.getSignupUrl = () => {
         return CasdoorSDK.getSignupUrl();
       };
