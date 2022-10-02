@@ -103,6 +103,34 @@ export default {
 </script>
 ```
 
+If you are using vue3 composition API, since it is inconvenient to obtain the Vue instance in `setup()`, `useCasdoor` provided a better way to access the sdk's methods.
+
+```vue
+<script>
+import { useCasdoor } from 'casdoor-vue-sdk';
+
+export default {
+  setup() {
+
+    const { getSigninUrl, getSignupUrl } = useCasdoor();
+
+    function login() {
+      window.location.href = getSigninUrl();
+    }
+
+    function signup() {
+      window.location.href = getSignupUrl();
+    }
+
+    return {
+      login,
+      signup
+    }
+  }
+}
+</script>
+```
+
 ## Q & A
 
 Q1:  How to solve "...index.js implicitly has an 'any' type..." error in typescript project?
