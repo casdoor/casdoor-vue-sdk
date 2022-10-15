@@ -1,6 +1,6 @@
 {
   "name": "casdoor-vue-sdk",
-  "version": "1.0.2",
+  "version": "1.2.0",
   "description": "Vue client SDK for Casdoor",
   "private": false,
   "license": "Apache-2.0",
