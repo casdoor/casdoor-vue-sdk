@@ -6,7 +6,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "babel src --out-dir dist/src && babel index.js --out-dir dist/ && cp package.json dist/ && cp LICENSE dist/",
+    "build": "babel src --out-dir dist/src && babel index.js --out-dir dist/ && cp package.json dist/ && cp LICENSE dist/ && cp README.md dist/",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
