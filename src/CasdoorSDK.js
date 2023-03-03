@@ -37,9 +37,17 @@ export default {
         return CasdoorSDK.getMyProfileUrl(account);
       };
 
-      app.prototype.signin = (ServerUrl) => {
-        return CasdoorSDK.signin(ServerUrl);
+      app.prototype.signin = (ServerUrl, signinPath) => {
+        return CasdoorSDK.signin(ServerUrl, signinPath);
       };
+
+      app.prototype.isSilentSigninRequired = () => {
+        return CasdoorSDK.isSilentSigninRequired();
+      }
+
+      app.prototype.silentSignin = (isLoggedIn, onSuccess, onFailure) => {
+        return CasdoorSDK.silentSignin(isLoggedIn, onSuccess, onFailure);
+      }
     }else{
 
       app.provide(CASDOOR_SDK_INJECTION_KEY,
@@ -48,7 +56,9 @@ export default {
           getSigninUrl: CasdoorSDK.getSigninUrl.bind(CasdoorSDK),
           getUserProfileUrl: CasdoorSDK.getUserProfileUrl.bind(CasdoorSDK),
           getMyProfileUrl: CasdoorSDK.getMyProfileUrl.bind(CasdoorSDK),
-          signin: CasdoorSDK.signin.bind(CasdoorSDK)
+          signin: CasdoorSDK.signin.bind(CasdoorSDK),
+          isSilentSigninRequired: CasdoorSDK.isSilentSigninRequired.bind(CasdoorSDK),
+          silentSignin: CasdoorSDK.silentSignin.bind(CasdoorSDK)
         }
       );
 
@@ -68,13 +78,22 @@ export default {
         return CasdoorSDK.getMyProfileUrl(account);
       };
 
-      app.config.globalProperties.signin = (ServerUrl) => {
+      app.config.globalProperties.signin = async (ServerUrl) => {
         const code = window.location.href.split('code=')[1].split('&')[0];
         const state = window.location.href.split('state=')[1].split('&')[0];
-        return fetch(`${ServerUrl}/api/signin?code=${code}&state=${state}`, {
+        const res = await fetch(`${ServerUrl}/api/signin?code=${code}&state=${state}`, {
           method: "POST",
-          credentials: "include",
-        }).then(res => res.json());
+          credentials: "include"
+        })
+        return await res.json()
+      };
+
+      app.config.globalProperties.isSilentSigninRequired = () => {
+        return CasdoorSDK.isSilentSigninRequired();
+      };
+
+      app.config.globalProperties.silentSignin = (isLoggedIn, onSuccess, onFailure) => {
+        return CasdoorSDK.silentSignin(isLoggedIn, onSuccess, onFailure);
       };
     }
 
