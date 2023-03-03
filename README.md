@@ -131,6 +131,48 @@ export default {
 </script>
 ```
 
+## API reference interface
+### Get sign up url
+```javascript
+getSignupUrl()
+```
+Return the casdoor url that navigates to the registration screen
+
+### Get sign in url
+```javascript
+getSigninUrl()
+```
+Return the casdoor url that navigates to the login screen
+
+### Get user profile page url
+```javascript
+getUserProfileUrl(userName, account)
+```
+Return the url to navigate to a specific user's casdoor personal page
+
+### Get my profile page url
+```javascript
+getMyProfileUrl(account)
+```
+
+### Sign in
+```javascript
+signin(serverUrl, signinPath)
+```
+Handle the callback url from casdoor, call the back-end api to complete the login process
+
+### Determine whether silent sign-in is being used
+```javascript
+isSilentSigninRequired()
+```
+We usually use this method to determine if silent login is being used. By default, if the silentSignin parameter is included in the URL and equals one, this method will return true. Of course, you can also use any method you prefer.
+
+### silentSignin
+```javascript
+silentSignin(onSuccess, onFailure)
+```
+`onSuccess` and `onFailure` are the callback methods for successful and failed login.
+
 ## Q & A
 
 Q1:  How to solve "...index.js implicitly has an 'any' type..." error in typescript project?

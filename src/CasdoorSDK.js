@@ -45,8 +45,8 @@ export default {
         return CasdoorSDK.isSilentSigninRequired();
       }
 
-      app.prototype.silentSignin = (isLoggedIn, onSuccess) => {
-        return CasdoorSDK.silentSignin(isLoggedIn, onSuccess);
+      app.prototype.silentSignin = (isLoggedIn, onSuccess, onFailure) => {
+        return CasdoorSDK.silentSignin(isLoggedIn, onSuccess, onFailure);
       }
     }else{
 
@@ -92,8 +92,8 @@ export default {
         return CasdoorSDK.isSilentSigninRequired();
       };
 
-      app.config.globalProperties.silentSignin = (isLoggedIn, onSuccess) => {
-        return CasdoorSDK.silentSignin(isLoggedIn, onSuccess);
+      app.config.globalProperties.silentSignin = (isLoggedIn, onSuccess, onFailure) => {
+        return CasdoorSDK.silentSignin(isLoggedIn, onSuccess, onFailure);
       };
     }
 
