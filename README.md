@@ -171,7 +171,7 @@ We usually use this method to determine if silent login is being used. By defaul
 ```javascript
 silentSignin(onSuccess, onFailure)
 ```
-`onSuccess` and `onFailure` are the callback methods for successful and failed login.
+First, let's explain the two parameters of this method, which are the callback methods for successful and failed login. Next, I will describe the execution process of this method. We will create a hidden "iframe" element to redirect to the login page for authentication, thereby achieving the effect of silent sign-in.
 
 ## Q & A
 

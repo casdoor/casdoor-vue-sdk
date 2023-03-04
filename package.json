@@ -10,7 +10,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "casdoor-js-sdk": "^0.7.0",
+    "casdoor-js-sdk": "^0.8.0",
     "core-js": "^3.8.3",
     "vue-demi": "latest"
   },

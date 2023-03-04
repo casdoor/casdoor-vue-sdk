@@ -3251,10 +3251,10 @@ cardinal@^2.1.1:
     ansicolors "~0.3.2"
     redeyed "~2.1.0"
 
-casdoor-js-sdk@^0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/casdoor-js-sdk/-/casdoor-js-sdk-0.7.0.tgz#ee6d8eea138210f26a14452a534cec6c4759b4cd"
-  integrity sha512-CcYf1YmdkCPmAbIn+RtQIHpLxq2H3UeOTmm+3ljg5bLBiESAJHhc0uGVpm7crWy/uAJJhQRgLXTPuoQQsgYCvQ==
+casdoor-js-sdk@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/casdoor-js-sdk/-/casdoor-js-sdk-0.8.0.tgz#ce32c49fdfe7f24a8139d676a341ad7e78c50f38"
+  integrity sha512-sxriNa3kG7AIkmJaRnQ554dZozRx+JOCcbqNvp9gxJmbdnMKYSGjg2SU/HaRpnyKtd1GW+ntfK+f2y/wYmnxRg==
 
 case-sensitive-paths-webpack-plugin@^2.3.0:
   version "2.4.0"
