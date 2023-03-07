@@ -57,7 +57,7 @@ export default {
           getUserProfileUrl: CasdoorSDK.getUserProfileUrl.bind(CasdoorSDK),
           getMyProfileUrl: CasdoorSDK.getMyProfileUrl.bind(CasdoorSDK),
           signin: CasdoorSDK.signin.bind(CasdoorSDK),
-          isSilentSigninRequired: CasdoorSDK.isSilentSigninRequired.bind(CasdoorSDK),
+          isSilentSigninRequested: CasdoorSDK.isSilentSigninRequested.bind(CasdoorSDK),
           silentSignin: CasdoorSDK.silentSignin.bind(CasdoorSDK)
         }
       );
