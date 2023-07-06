@@ -7,7 +7,7 @@
 [![GitHub Actions](https://github.com/casdoor/casdoor-vue-sdk/actions/workflows/build.yml/badge.svg)](https://github.com/casdoor/casdoor-vue-sdk/actions/workflows/build.yml)
 [![Coverage Status](https://codecov.io/gh/casdoor/casdoor-vue-sdk/branch/master/graph/badge.svg)](https://codecov.io/gh/casdoor/casdoor-vue-sdk)
 [![Release](https://img.shields.io/github/release/casdoor/casdoor-vue-sdk.svg)](https://github.com/casdoor/casdoor-vue-sdk/releases/latest)
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/casbin/casdoor)
+[![Discord](https://img.shields.io/discord/1022748306096537660?logo=discord&label=discord&color=5865F2)](https://discord.gg/5rPsrAzK7S)
 
 [npm-image]: https://img.shields.io/npm/v/casdoor-vue-sdk.svg?style=flat-square
 
