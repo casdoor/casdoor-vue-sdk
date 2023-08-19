@@ -78,10 +78,11 @@ export default {
         return CasdoorSDK.getMyProfileUrl(account);
       };
 
-      app.config.globalProperties.signin = async (ServerUrl) => {
+      app.config.globalProperties.signin = async (ServerUrl, signinPath) => {
         const code = window.location.href.split('code=')[1].split('&')[0];
         const state = window.location.href.split('state=')[1].split('&')[0];
-        const res = await fetch(`${ServerUrl}/api/signin?code=${code}&state=${state}`, {
+        const path = signinPath || CasdoorSDK.config.signinPath || '/api/signin';
+        const res = await fetch(`${ServerUrl}${path}?code=${code}&state=${state}`, {
           method: "POST",
           credentials: "include"
         })
