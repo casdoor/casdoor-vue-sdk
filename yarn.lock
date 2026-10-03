@@ -3672,10 +3672,13 @@ caniuse-lite@^1.0.30001449:
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001460.tgz#31d2e26f0a2309860ed3eff154e03890d9d851a7"
   integrity sha512-Bud7abqjvEjipUkpLs4D7gR0l8hBYBHoa+tGtKJHvT2AYzLp1z7EmVkUT4ERpVUfca8S2HGIVs883D8pUH1ZzQ==
 
-casdoor-js-sdk@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/casdoor-js-sdk/-/casdoor-js-sdk-0.8.0.tgz#ce32c49fdfe7f24a8139d676a341ad7e78c50f38"
-  integrity sha512-sxriNa3kG7AIkmJaRnQ554dZozRx+JOCcbqNvp9gxJmbdnMKYSGjg2SU/HaRpnyKtd1GW+ntfK+f2y/wYmnxRg==
+casdoor-js-sdk@^0.21.1:
+  version "0.21.1"
+  resolved "https://registry.yarnpkg.com/casdoor-js-sdk/-/casdoor-js-sdk-0.21.1.tgz#3cb989b72d00e90336f3a283f3f747549b3542db"
+  integrity sha512-RCV4Dasd8Z908y5ktMBuAsFH+4uTz2R4/V38JtI3UALjhUxSJynfVhNI7eGmcGyyA1mpr+gUayF/4vJ26go/fg==
+  dependencies:
+    js-pkce "^1.3.0"
+    jwt-decode "^4.0.0"
 
 case-sensitive-paths-webpack-plugin@^2.3.0:
   version "2.4.0"
@@ -4159,6 +4162,11 @@ cross-spawn@^7.0.6:
     path-key "^3.1.0"
     shebang-command "^2.0.0"
     which "^2.0.1"
+
+crypto-js@^4.0.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/crypto-js/-/crypto-js-4.2.0.tgz#4d931639ecdfd12ff80e8186dba6af2c2e856631"
+  integrity sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==
 
 crypto-random-string@^4.0.0:
   version "4.0.0"
@@ -6009,6 +6017,13 @@ js-message@1.0.7:
   resolved "https://registry.yarnpkg.com/js-message/-/js-message-1.0.7.tgz#fbddd053c7a47021871bb8b2c95397cc17c20e47"
   integrity sha512-efJLHhLjIyKRewNS9EGZ4UpI8NguuL6fKkhRxVuMmrGV2xN/0APGdQYwLFky5w9naebSZ0OwAGp0G6/2Cg90rA==
 
+js-pkce@^1.3.0:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/js-pkce/-/js-pkce-1.5.1.tgz#8c16144e49280950c754a5b747a2a7ce685afe00"
+  integrity sha512-+NYxv4wAwa/aHKpXS+AhBswxeOtIpxVwoz36oBLHjznCcTg+v8L9ijDR6xtkZb5vsxdpQ7sEWtr4fCc9aIt8yA==
+  dependencies:
+    crypto-js "^4.0.0"
+
 js-queue@2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/js-queue/-/js-queue-2.0.2.tgz#0be590338f903b36c73d33c31883a821412cd482"
@@ -6128,6 +6143,11 @@ just-diff@^6.0.0:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/just-diff/-/just-diff-6.0.2.tgz#03b65908543ac0521caf6d8eb85035f7d27ea285"
   integrity sha512-S59eriX5u3/QhMNq3v/gm8Kd0w8OS6Tz2FS1NG4blv+z0MuQcBRJyFWjdovM0Rad4/P4aUPFtnkNjMjyMlMSYA==
+
+jwt-decode@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/jwt-decode/-/jwt-decode-4.0.0.tgz#2270352425fd413785b2faf11f6e755c5151bd4b"
+  integrity sha512-+KJGIyHgkGuIq3IEBNftfhW/LfWhXUIY6OmyVWjliu5KH1y0fw7VQ8YndE2O4qZdMSd9SqbnC8GOcZEy0Om7sA==
 
 kind-of@^6.0.2:
   version "6.0.3"
