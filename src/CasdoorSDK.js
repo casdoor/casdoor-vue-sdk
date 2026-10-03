@@ -41,7 +41,7 @@ export default {
         return CasdoorSDK.signin(ServerUrl, signinPath);
       };
 
-      app.prototype.isSilentSigninRequested = () => {
+      app.prototype.isSilentSigninRequired = () => {
         return CasdoorSDK.isSilentSigninRequested();
       }
 
@@ -57,7 +57,7 @@ export default {
           getUserProfileUrl: CasdoorSDK.getUserProfileUrl.bind(CasdoorSDK),
           getMyProfileUrl: CasdoorSDK.getMyProfileUrl.bind(CasdoorSDK),
           signin: CasdoorSDK.signin.bind(CasdoorSDK),
-          isSilentSigninRequested: CasdoorSDK.isSilentSigninRequested.bind(CasdoorSDK),
+          isSilentSigninRequired: CasdoorSDK.isSilentSigninRequested.bind(CasdoorSDK),
           silentSignin: CasdoorSDK.silentSignin.bind(CasdoorSDK)
         }
       );
@@ -89,7 +89,7 @@ export default {
         return await res.json()
       };
 
-      app.config.globalProperties.isSilentSigninRequested = () => {
+      app.config.globalProperties.isSilentSigninRequired = () => {
         return CasdoorSDK.isSilentSigninRequested();
       };
 
